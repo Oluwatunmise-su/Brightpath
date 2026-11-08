@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #202b28;
+  background: #f7f8f5;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; text-decoration: none; }
+.site { min-height: 100vh; display: flex; flex-direction: column; }
+.site-header {
+  width: min(1120px, calc(100% - 48px)); margin: 0 auto;
+  min-height: 82px; display: flex; align-items: center;
+  justify-content: space-between; gap: 24px;
+}
+.logo { font: 800 25px 'Manrope', sans-serif; letter-spacing: -1px; }
+.logo span { color: #d58a55; }
+nav { display: flex; gap: 30px; flex-wrap: wrap; }
+nav a { color: #69736e; font-size: 14px; font-weight: 600; padding: 8px 0; }
+nav a.active, nav a:hover { color: #bd7544; }
+main { flex: 1; }
+.hero {
+  width: min(1120px, calc(100% - 48px)); margin: 48px auto 80px;
+  min-height: 500px; display: grid; grid-template-columns: 1.15fr .85fr;
+  align-items: center; gap: 70px;
+}
+.eyebrow { color: #bd7544; font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+h1, h2 { font-family: 'Manrope', sans-serif; }
+.hero h1 { font-size: clamp(42px, 6vw, 68px); line-height: 1.12; letter-spacing: -3px; margin: 18px 0; }
+.hero h1 span { color: #bd7544; }
+.intro, .page-lead { color: #68736d; font-size: 17px; line-height: 1.8; max-width: 570px; }
+.hero-actions { display: flex; align-items: center; gap: 24px; margin-top: 30px; flex-wrap: wrap; }
+.button {
+  display: inline-block; border: 0; border-radius: 7px; background: #24483d;
+  color: white; padding: 14px 21px; font: 600 14px 'DM Sans', sans-serif; cursor: pointer;
+}
+.button:hover { background: #18382f; }
+.text-link { color: #24483d; font-size: 14px; font-weight: 700; }
+.hero-card {
+  background: #e9eee7; border-radius: 18px; padding: 48px 38px;
+  min-height: 340px; box-shadow: 0 20px 50px rgba(34, 61, 48, .07);
+}
+.circle { width: 62px; height: 62px; display: grid; place-items: center; border-radius: 50%; background: #24483d; color: white; font: 800 27px 'Manrope'; }
+.hero-card h2 { font-size: 25px; margin: 30px 0 8px; }
+.hero-card p { color: #68736d; line-height: 1.7; }
+.card-line { height: 1px; background: #cbd6ca; margin: 28px 0 18px; }
+.hero-card .small-note { font-size: 10px; letter-spacing: 1.3px; font-weight: 700; }
+.page { width: min(900px, calc(100% - 48px)); margin: 65px auto 90px; }
+.page h1 { font-size: clamp(36px, 5vw, 52px); letter-spacing: -2px; margin: 12px 0; }
+.content-panel { background: white; border: 1px solid #e8ebe5; border-radius: 12px; padding: 30px; margin-top: 35px; }
+.content-panel h2 { font-size: 20px; margin: 8px 0; }
+.content-panel p, .service-card p { color: #68736d; line-height: 1.8; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 38px; }
+.service-card { background: white; border: 1px solid #e8ebe5; border-radius: 12px; padding: 25px; }
+.service-number { color: #bd7544; font-size: 12px; font-weight: 700; }
+.service-card h2 { font-size: 20px; }
+.contact-form { max-width: 620px; display: grid; gap: 18px; margin-top: 35px; }
+.contact-form label { display: grid; gap: 8px; font-size: 14px; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+  width: 100%; border: 1px solid #dce2db; border-radius: 7px; padding: 13px;
+  background: white; color: #202b28; font: 14px 'DM Sans', sans-serif;
+}
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid #b9cbbd; border-color: #78917f; }
+.contact-form .button { justify-self: start; }
+.success-message { color: #276344; font-weight: 600; margin: 0; }
+.form-note { color: #89918c; font-size: 12px; }
+.site-footer { border-top: 1px solid #e5e9e2; padding: 24px; text-align: center; color: #87908a; font-size: 12px; }
+@media (max-width: 760px) {
+  .site-header { padding: 18px 0; align-items: flex-start; flex-direction: column; }
+  nav { gap: 20px; }
+  .hero { grid-template-columns: 1fr; gap: 35px; margin-top: 35px; }
+  .hero-card { min-height: auto; }
+  .service-grid { grid-template-columns: 1fr; }
+  .page { margin-top: 42px; }
+}
